@@ -1,0 +1,69 @@
+ <!-- Ques=>
+ 1.) display  goodmorning , afternoon and night based based on current hour
+ 2.) add the name to the output toolbar.
+ .3) create a button which show the number how many times it has been presed.
+ i.) also it has different color for when it has been pressed odd or even time.
+ ii.)the click count should also survive browser refresh. -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>dom exercise</title>
+    <style>
+     .js-odd{
+         background-color: brown;
+      }
+      .js-even{
+         background-color: chartreuse;
+      }
+    </style>
+ </head>
+ <body>
+    <H3 id ="greeting"></H3>
+<button id ="my-button" onclick="buttonPressed();"></button>
+
+   <script>
+   let noOfTimesClicked = localStorage.getItem(' noOfTimesClicked')|| 0;
+   function buttonPressed(){
+   noOfTimesClicked++;
+   localStorage.setItem('noOfTimesClick',noOfTimesClicked);
+   updateButton();
+    }
+
+   function updateButton(){
+   let button = document.querySelector('#my-button');
+   if(noOfTimesClicked % 2===0){
+   button.classList.remove('js-odd');// js-odd mtlb haima jo odd ka aga js likha hai iska mtlb hai ke  hum ya jo class use kr rhya hai vo hum particular js ka lia use kr rahya hai..
+   button.classList.add('js-even');
+   }
+   else{
+   button.classList.remove('js-even');
+   button.classList.remove('js-odd');
+   }
+   button.innerText = noOfTimesClicked;
+   }
+   updateButton();
+
+   
+   function doGreeting(personName=' dear '){
+       let date = new Date();
+      let hours = date.getHours();
+   //  let hour = 13;// output ata good afternoon
+       let heading = document.querySelector$('#greeting');
+    //    console.log(date); 
+      if( hours>5 && hours<12){
+      heading.innerText=`good morning
+       {personName}`;
+      }
+      else if(hours>12 && hours<18){
+      heading.innerText=`good afternoon${personName}`;
+      }
+      else{
+      heading.innerText=`goodnight${personName}`;
+      }
+      }
+    doGreeting();
+ </script>
+ </body>
+
+ </html>

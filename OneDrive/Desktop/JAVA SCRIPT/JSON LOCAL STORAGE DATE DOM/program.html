@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>json</title>
+</head>
+<body>
+  <script>
+let product={
+    name:'tshirt',
+    price:789,
+    rating:{// yaha haimna rating ko another object lia hai..
+    stars:4.5,
+    noofreviews:453
+    },
+};
+console.log(typeof product);
+console.log(product);
+
+let str = JSON.stringify(product);////yah haimn object ko string mai convert kr lia hai..
+console.log(typeof str);// typeof se haimna yai dkhna ka lia ke object convert hua hai string mai yai nhi..
+console.log(str);
+
+let newproduct=JSON.parse(str);//yah haimn string ko object mai convert kr lia..
+console.log(typeof newproduct);
+console.log(newproduct);
+  </script>  
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>local storage</title>
+</head>
+<body>
+
+  <script>
+  localStorage.setItem('name','deepu');
+  localStorage.setItem('age','74774');
+  // isa run kraga aur inspect kr ka dkhaga aur application pa click kraga aur phir storage mai check kraga aur phir output dkhaga.. 
+</script>
+
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log(localStorage.getItem('name'));// is se jo haimna upper {name deepu]code mai likh ka save kra tha vo hamara computer ma save ho gya tha chaya  to hum is code se run kr ka hum isa dobara access kr sakta hai..
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      let product1={
+          size:'s',
+          name:'jeans',
+          fit:'slim fit',  
+          'delivery-time':'same day delivery',
+        }; 
+        localStorage.setItem('product1', product1); // profduct1 likha se isa kuch smj nhi ata to ya output mai ( object,object )de deta hai
+        localStorage.setItem('product1', JSON.stringify(product1)); // yai krna se hamari object ke sari value store ho jaygi
+        console.log(localStorage.getItem('product1')); // asha krna se consolr pai bhe (objetc,object) show hoga;
+        let product2 = JSON.parse(localStorage.getItem('product1'));
+        console.log(product2);
+
+        localStorage.removeItem('size'); // kuch bhe hama remove krna ho to asha kr sakta hai..
+        localStorage.clear();// yadi storage ka ander hama kuch bhe delete krna hoo to hum asha kr dega ..
+  </script>
+</body>
+</html>
+
+ 

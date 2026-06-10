@@ -1,0 +1,38 @@
+<!-- yadi mai kuch bhe console mtlb[DOM] mai change kruga to  vo mera page pa change hoga aur jo page mai change kraga vo mera dom mai hoga..
+
+        [ DOM AND ELEMENT PROPERTY ]
+ 1.)document.location   => ya  likhna se hama hamri file ke location ka pta chal jayga.
+
+ 2.) document.title     => is se hamra console ka ander prg ka title likh ka a jayga. 
+
+ 3..) document.title    =>'kg coading' yadi ma console mai ya likh duga to mera page ka titile change ho jayga  aur refresh krna pa sub hat jayga.
+
+ 4.)document.domai=> is se hamri website ka server ka domain pta chal jata hai
+
+ 5.) document.classlist=> isa pta chlta hai ke haimna apna particular element pa kon kon se classes lagyi hui hai. asha likhyga consloe mai [document.queryselector('buttom').classlist.add('deepu').add deepu krna se hum isa class add kr sakta hai aur remove bhe kr saskta hai{AUR IS SE HUM APNA DOM KO ACCHA SE EDIT KR SAKTA HAI}]-->
+<!-- 
+                [DOM AND ELEMEMT METHOD] 
+                1.) getelemetbyid()=> ya picha dkh lia
+                2.)querselector()=> ya picha dkh lia
+                3.) classlist: add(). remove()=> ya picha dkh lia
+                4.) createlement()=>is se hum ek element bna sakta hai 
+                5.) appendchild()=>kis exixting ka ander yadi muja kuch add krna hoo
+                6.)removechild()
+                7.)replacechild()--> relace se button ko replace kr sakta hai
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>dom</title>
+ </head>
+ <body>
+    <!-- <button class="my-button" >button</button> -->
+    <!-- <div class="my_div">this is the div</div> -->
+
+    <script>
+    let button =document.createElement('sheer');//yadi mai ya line likh ka console ma [button] type krta hmm too console hama bta deta hai ke ek button hai sheer nam ka..
+    button.innertext='click_me';// .jo haimna button bnaya hai hum isma innertext ke madad se kuch text bhe  add kr sakta hmm.
+    document.querySelector(".my_div").appendChild(button);//yadi mai ksi purana ka ander kuch add krna chata hmm to asha kr sakta hmm mtlb child add krna chata hmm..
+    document.querySelector(".my_div").removeChild(button);// remove se jo haimna button bnaya thya issa hum button ko remove bhe kr sakta hai.
+</script>
+ </body>
+ </html>
