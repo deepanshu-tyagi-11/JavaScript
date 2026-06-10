@@ -1,0 +1,121 @@
+<!-- [OBJECT]......
+
+1.)GROUP MULTIPLE VALUES TOGETHER IN KEY VALUE PAIR..
+2.)ACCES TO USE (.)DOT OPERATOR.
+3.) ORGAIZED REALTER DATA UNDER A SINGLE NAME..
+EXAMPLE..
+let user={// user is a object
+    name :" deepu",  
+    age:"34"
+}
+// name and age  property of user object.. 
+
+[ACCESSING OBJECT]....
+
+
+ACCES property using . dot opeator..
+like => user.age;
+
+1.) in this case value can be added or remove in a aobject -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user={
+            name:"deepu",
+            age:54,
+            iteam_name:'t-shirt',
+            'iteam-name2':'hoodi',// yadi koi hamri [key] string ka ander define ho to  hum key ko is method se acces kr ga  console.log(['iteam-name2']) phir asha nhi kraga cosnole.log(iteam-name2);
+                };
+        // // console.log(typeof user);// user ek object hai;
+        // console.log(user);// asha hum apna accessing object ko print kr sakta hai.
+        // console.log(user.age)// aur asha hum ksi bhe personal key ko use kr sakta hai..
+
+        // user.name="krish";       //ab in dono line mai
+        // console.log(user);        //haima  apni key ko dobara write kr lia ...
+
+              //OR
+        // console.log(user['name'])   // hum is traha se bhe acces kr sakta hai..   
+        // console.log(user['iteam-name2'])
+        // console.log('user.iteam_name')
+
+             //OR
+             let propertyname ='iteam_name2';
+             console.log(user['propertyname']);//yadi user.propertyname likha ga vo usha acces nhi kar payga..
+                               //OR
+                delete user.name;
+                // delete user['name']; asha bhe delte kr sakta hai
+                console.log(user);// delete keyword se kuch bhe delete kr sakta hai               
+    </script>
+</body>
+</html>
+
+                                          <!-- OR -->
+<!-- 
+
+
+  [INSIDE OBJECT]  ....
+
+
+  1.) object can contain  number like strings 
+  2.)oject can contain other object like nested object.
+  3.)functions is also write inside in an object
+  Function is also a object property
+
+  NOTE=> jub koi functiion object a ander hota hai to isa method bola jata hai ..
+  function inside an object is called method..
+
+  example=>
+
+
+  let product={
+    company:'mango'
+    itemname:'cotton striped t-shirt'
+    price:942,
+    //yai properties hai 
+
+    rating:{
+        star:4.5,
+        noofreviews:87
+    },
+// yai object hai
+
+    displayprice:function(){
+        return`$${this.price.to fixed(2)}`;
+    }
+    //yai function hai
+    // this ka mtlb hai jo mera current object ka ander price hai vo de da..
+  }
+  NOTE=> properties ,object, aur functions teeno likh sakta hain hai inside object kai ander.. -->
+
+
+                              <!-- [AUTOBOXING] -->
+   primitives=> normaly jasha mai koi value ya string define kr raha hmm isha bolta hai primitives .
+   1.) jsha hamra object ka nder different different method ya properties rehata hai asha he hamar [PRIMITIVES] ka and  bhe differenet different methods aur rehati hai ..  
+
+                               <!-- OBJECT REFRENCE-->
+1.) object work based on refrence not actual data.
+2.)copying an object copies the refrence , not the actual object.
+3.) when comparing with == you are compairing refrence not content.
+4.)chnage to  one refrence affects all copies. 
+
+NOTE=> yadi hum object ke copy bnana ke kosis kr rahya hai to vo copy object ke nhi banti.. refrence ke copy  banti hai..object ke by default copy  nhi banti hai..
+<!-- 
+OBJECT SHORTCUT -->
+
+1.)DE-STRUCTING:
+extract properties from objects easily
+.) we can extract more than one property at once
+
+2.) SHORTHAND PROPERTY:
+.){message:message}simplify to just message.
+
+3.) METHORD SHORTHAND -->
+define methods directky inside the object, without the function keyword
+
+
+NOTE= de-structing ko mostly use krta hai  

@@ -1,0 +1,89 @@
+<!-- QUESTION:
+ 
+1.)creat object to represent a product from myntra
+
+2.) creat an object with two refrence and logo changes to one object by changing the other one
+
+3.) use bracket notation  to dispay deleviry -time
+
+4.)give an object {message : 'good job',status:'complete'},use de-structing to creat two variables message and status.
+
+5.)add function isidenticalproduct to compare two product object  -->
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product1={
+          size:'s',
+          name:'jeans',
+          fit:'slim fit',  
+          'delivery-time':'same day delivery',
+        }; 
+
+
+        let copyproduct=product;
+        console.log(product);// ek refrence upper tha aur ek refrence yai bna lia haimna 
+        copyproduct.size='m'
+        console.log(product);
+        copyproduct.fit='regular fit'
+        console.log(product);
+
+        console.log(product['delivery-time']);//yai hamina bracket notation se acces kr lia
+
+        let obj={
+            message:'goodjob',
+          status:'complete'
+        }
+console.log(obj);
+        let (message,status)=obj;//yaha haimna de-structing ka use kr lia..
+        console.log('message');
+        console.log('status');
+
+// YAHA SE QUESTION 5 KA SOLUTION HAI...
+
+        function isidenticalproduct(product1, product2){
+        // phla haimna chek kr lia jo dono cheeja ayi vo object tha ya nhi...
+            if(typeof product1 !=='object' || typeof product2 !== 'object'){
+
+            console.warn('parameter passed was not an object');
+            return false;// false ka mtlb hum equakity check he nhi kraga ku iska mtlb haimna jo pass kia vo object tha he nhi
+            }
+        
+if(product1 == product2){//1.)asha to nhi ke dono refrences ek he object ka hoo to hum islyia inha dono ko compare kraga..
+ //2.)phir haimna check kr lia dono same to nhi..   
+    return true;// dono ek ka he hai to return true kr do..
+        }
+
+    if(product1.name===product2.name&&
+      product1.size===product2.size&&
+        // NOTE=>delivery time compare nhi kraga kuki ya not equal bhe ho sakt hai..
+      product1.fit===product2.fit){
+        return true;
+    }else{
+        return false;
+    }
+
+        }   
+    let product2={//hum yaha product 2 bna lega[product1 aur product 2 ]ko compare krna ka lia..
+          size:'m ',
+          name:'jeans',
+          fit:'slim fit',  
+          'delivery-time':'same day delivery',
+        }; 
+        let product3={
+          size:'m ',
+          name:'jeans',
+          fit:'slim fit',  
+          'delivery-time':'same day delivery',
+        }; 
+        console.log(isidenticalproduct(product1,'',));
+        console.log(isidenticalproduct(product1,product1,));
+        console.log(isidenticalproduct(product3,product2,));
+        console.log(isidenticalproduct(product2,product3,));
+        console.log(isidenticalproduct(product,product2,));
+    </script>
+</body>
+</html>

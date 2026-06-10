@@ -1,0 +1,146 @@
+<!-- 1.) program of inside object
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>inside-object</title>
+</head>
+<body>
+    <script>
+         let product={
+    company:'mango',
+    price:942,
+    'iteam-name':'t-shirt',
+    displayprice:function(){
+        console.log(`price of the product is ${this.price}`)
+    }
+    };
+    product.displayprice();
+    </script>
+</body>
+</html> -->
+
+<!-- 2.) program of primitives.. -->
+ 
+ <!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>primitives</title>
+ </head>
+ <body>
+    <script>
+        console.log(`primitive ka ander object ksha lagata hai`.length)// haimna primitive ka ander .length method laga dia ..arr aur bhe method laga sakta hai..
+        // actually yai tha to primitives but .length likha se jaavscript na isa ek object bna lia..
+        // .lenght likha se ya string {primitive ka ander object ksha lagata hai} ab PRIMITIVE BHE HAI AUR OBJECT BHE HAI..,
+        console.log(`primitive ka ander object ksha lagata hai`.replace('primitive','deepanshu'));
+    </script>
+ </body>
+ </html> -->
+
+
+ <!-- program of OBJECT REFRENCE -->
+  <!-- <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>OBJECT REFRENCE</title>
+  </head>
+  <body>
+    <script>
+        let a=5;
+        let b=a;
+        console.log(`a=${a},b=${b}`);
+        a=8;
+        console.log(`a=${a},b=${b}`);
+
+        let x={num:5};
+        let y=x;// x is a refrence to a object
+        console.log(`x=${x.num},y=${y.num}`);
+        x.num=8;
+        console.log((`x=${x.num},y=${y.num}`));
+
+        let p={pop:'IUYT'};
+        let q={pop:'IUYT'};
+        console.log(p==q);// ya false ayga ..kuki ya dono equal nhi hai kuki ya addres compare kr raha hai dono ka ..aur p and q ka dono ka address different hai..
+        // IUYT object jo hai vo refrence hai p ka lia asha he q ka lia hai..
+        </script>
+  </body>
+  </html> -->
+
+
+  <!-- De structing.. -->
+<!-- 
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <title>de-structing</title>
+   </head>
+   <body>
+    <script>
+        let product={
+            company:'mango',
+            iteamname:'cotton striped t-shirt',
+            price:861
+        };
+        //destructing
+        // let company =product.company
+        //is same as
+        let {company,price} =product;
+        console.log(company);
+        console.log(price);
+    </script>
+   </body>
+   </html> -->
+
+   <!-- SHORTHAND PROPERTY -->
+
+    <!-- yai vala method use krna shai nhi hai -->
+    <!-- <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title> property shorthand</title>
+    </head>
+    <body>
+        <script>
+            let price=861;
+            let product={
+            company:'mango',
+            iteamname:'cotton striped t-shirt',
+            price:price
+            };
+            // is same as
+            let product1={
+                company:'mango',
+                iteamname:'cotton striped t-shirt',
+                price
+            }
+        </script>
+    </body>
+    </html> -->
+
+
+    <!-- METHOD SHORTHAND  -->
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+        <title>METHOD SHORTHAND</title>
+     </head>
+     <body>
+        <SCRIPT>
+            let product={
+            company:'mango',
+            iteamname:'cotton striped t-shirt',
+            displayprice:function(){// is ke jagha ma nich short mai bhe likh sakta hmm is called method shorthand..
+                return`${this.price.tofixed(2)}`;
+            }
+        };
+        // is same as
+            let product1={
+            company:'mango',
+            iteamname:'cotton striped t-shirt',
+            displayprice(){
+                return`${this.price.tofixed(2)}`;
+        }
+        };
+        </SCRIPT>
+     </body>
+     </html>
