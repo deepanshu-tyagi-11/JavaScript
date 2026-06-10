@@ -1,0 +1,33 @@
+QUES=>
+.) 1 dal rupee 100 , 2  roti rupee 10 each, 1 iceram rupees 30 calculate and display the bill amount.
+.)calculate the 18% gst on i phone 15 rupees 79990 and 2 air pods rupees 24990 each.
+.)creat string using all three metod .
+.)concinate string with string , an string with numbers.
+.)creat order summary string for  our myntra cart.
+.)display order summary in a popup.
+
+
+ans1.)'₹'+((1*100)+(2*10)+(30*1))=>₹150
+                  OR
+` YOR FINAL BILL IS ₹${((100+20+30))}`=>
+' YOR FINAL BILL IS ₹150'
+
+  ans 2.)`your gst amount is ₹${(79990+(2*24990))*18/100}`
+  =>'your gst amount is ₹23394.6'
+
+  ans 3.)`method 1`
+          "method 2"
+          'method 3'
+
+   ans 4.) 'hello'+" deepu"
+            => 'hello deepu' 
+                  OR
+            'deepu age '+`19 `
+            =>  'deepu age 19 ' 
+ ans 5.)(`your final myntra bag amount is₹${math.round(((15599-(10/100*15599))-272)+(2499-(41/100*2499))-29+25+20)*118/100)}`)
+=>`your final myntra bag amount is₹18004 `
+
+ans 6.)alert(`your final myntra bag amount is₹${math.round(((15599-(10/100*15599))-272)+(2499-(41/100*2499))-29+25+20)*118/100)}`)
+ans=> ab ya jo haimna likha hai ya hamra page kai popup mai dikhyga.
+
+NOTE=> is calcuation ka hum aga short tarika dkhyga ..
