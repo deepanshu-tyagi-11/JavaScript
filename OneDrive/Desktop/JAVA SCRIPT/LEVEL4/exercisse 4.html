@@ -1,0 +1,30 @@
+<!-- [QUES]
+1.)save your name in a varibale insde script tag.
+2.) display name for the variable on the page.
+3.) calcute the cost of myntra bag and keep it in a variable.show it in console.
+4.)keep gst percentage as constant.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>exercise 4</title>
+</head>
+<body>
+    <p id ="name-display"></p>
+
+<script>
+const Myname = 'deepanshu';//--varibale creat kia aur console.log ke madad se print krava lia.
+// console.log(Myname);
+document.querySelector('#name-display').innerText = Myname; //yaha haimna apna nam ko diplay pai dikha dia.
+const gstpercent=18;
+let cartvalue = Math.round(((15599-(10/100*15599))-272+(2499-(41/100*2499))-29+25+20)*(100+gstpercent)/100);
+console.log(cartvalue);
+</script>
+
+</body>
+</html> 
+
+<!-- ques.)[use EVAL method from math  to  convert string calculation into result].  -->
+         => eval likhna se hamra browser string ko as a mathmatical value use kraga.
+         example  =>   console.log(eval('45+2'))   // eval use kr dia islya ans 47 aya hai vrna 45+2 asha ata.
+         ans=> 47 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>myntra bag</title>
+    <link rel="stylesheet" href="/CSS folder/myntra bag exercise.css">
+    
+    
+</head>
+<body>
+<button id ="button1" class="class" onclick =" cartquantity++ ; 
+document.querySelector ('#cart-summary').innerText =`your bag has ${cartquantity } item`;">ADD to bag</button>
+<!-- yah haimna onclick or query selector aur innert text ka use kr  ka button ka ander jann dal de-->
+
+<button id ="button2" class="class" onclick =" cartquantity =cartquantity- 1 ; 
+document.querySelector ('#cart-summary').innerText =`your bag has ${cartquantity } item`;"> move to WISHLIST</button> 
+   
+
+    <button id ="button3" class="class"onclick =" cartquantity += 2 ; 
+document.querySelector ('#cart-summary').innerText =`your bag has ${cartquantity } item`;">ADD 1+1 sale iteam</button>
+
+    <h2 id ="cart-summary"></h2><!--yaha ek id bna le jo bhe change krna hai us ke -->
+    <script>
+let cartquantity = 0; // phir yaha ek variable define kr dia.
+document.querySelector ('#cart-summary').innerText =`your bag has ${cartquantity } item`;////phla  haimna selector laga dia phir yaha haima text change krna hai to haimna [inner text] ka use kr lia .
+    </script>
+</body>
+</html>
