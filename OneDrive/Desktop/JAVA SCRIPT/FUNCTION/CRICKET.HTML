@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>cricket game</title>
+    <style>
+    body{
+    text-align: center;
+     }
+    </style>
+</head>
+<body>
+    <h1>BAT BALL STUMP GAME</h1>
+    <button onclick=" 
+//     Generatecomputerchoice();// asha likhyga to nhi chlayga ab kuki haimna local varible bnana dia hai '
+    computerchoice = Generatecomputerchoice();// local varible bana pai asha likhna padta hai;
+     // computerchoice=Generatecomputerchoice();
+     let resultmsg = getresut('bat',computerchoice);
+     showresult('bat',computerchoice,resultmsg);
+    //  const computerchoicemsg=`${computerchoice}`;//yai line haimna short mai likh de upper teeno line comment kri hai unki batki .
+    ">bat</button>
+                                      <!-- ------------- -->
+    <button onclick=" 
+    computerchoice=Generatecomputerchoice();//direct return kraya do hma ya computerchoice likhna padhyag;
+//  resultmsge;
+      let resultmsg  = getresut('ball',computerchoice);
+      showresult('Ball',computerchoice,resultmsg);
+    //   computerchoicemsg =`${computerchoice}`;//yai line haimna short mai likh de upper teeno line comment kri hai unki batki .
+">ball</button>
+                                               <!-- ------ -->
+    <button onclick="  
+   computerchoice= Generatecomputerchoice();//direct return kraya do hma ya computerchoice likhna padhyag;
+// resultmsg;
+let resultmsg= getresut('stump',computerchoice);
+     showresult('stump',computerchoice,resultmsg);
+    //  computerchoicemsg=`${computerchoice}`;//yai line haimna short mai likh de upper teeno line comment kri hai unki batki .
+  " >stump</button>
+
+    <script>
+//  let computerchoice;// this is a global variable // yadi mai isa local bna deta hmm to mai isa upper function mai use nhi kr sakta phir cpde chlayga nhi..
+ function Generatecomputerchoice(){
+     let randomnumber = Math.random()*3;// this will be genarte randon number between 0 & 3;
+     // let choice;// yaha haimna isa local bna dia ab code nhi chlayga..//aur nich yadi ma direct return kruga to isa bhe hata duga ..
+    if (randomnumber > 0 && randomnumber <=1){ 
+      return'bat';
+    }
+    else if(randomnumber > 1 && randomnumber <=2){  
+     return'ball';
+    }
+    else {
+     return'stump';
+    }
+//     return choice;// ya add krna padyga yadi hum locala varible bnata hai too. this is a simple approch ..
+// jub upper se choice varible ko hata dega to isa bhe hata dega.
+ }
+
+function getresult( userMove ,computerMove ){  
+if(userMove==bat){
+    if(computerMove==='ball'){
+   return'users win';
+    }
+    else if(computerchoice==='bat'){
+   return'the match is tie';
+    }
+
+    else if(computerchoice==='stump'){
+   return'computer has won';
+    }
+
+}
+else if(userMove==ball){
+    if(computerMove ==='ball'){
+    return `it's is tie`;
+     }
+     else if(computerchoice==='bat'){
+    return 'computer has won';
+     }
+     else if(computerchoice==='stump'){
+    return  'user won.';
+     }
+}
+
+else(userMove==stump){
+    if(computerMove ==='ball'){
+   return`computer has won`;
+    }
+    else if(computerchoice==='bat'){
+   return 'user won';
+    }
+    else if(computerchoice==='stump'){
+   return `it's a tie`;
+    }
+}
+}
+
+function showresult(userMove,computerMove,result){
+    alert (`you have choosen${userMove} computerchoice is ${computerMove} and ${result}`);
+}
+</script>
+</body>
+</html>
