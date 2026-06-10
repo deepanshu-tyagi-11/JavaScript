@@ -1,1 +1,0 @@
-{"username":"satyam","gender":"male"}
