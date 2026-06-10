@@ -1,0 +1,135 @@
+<!-- [CRICKET GAME]; 
+ 1) game mai teen chija ha bat ball stump aur inma se ek mai chosse kruga aur ek computer khud choose kraya jisss ke power jadya hogi voo jeet jayga .
+ .)like ball or stump mai se ball jeeta gee.
+ .)aur ball or bat mai se bat jeeta gaa.
+ .)stump aur bat  mai se bat jeeta ga.-->
+
+                           <!-- [NOTE].
+
+  .) HAMRI PROBLEM YAI HAI KE AB COMPUTER RANODOM KSH CHOOSE KRA[BAT BALL OR STUMP] MAI SE TO HAIMA EK APPROACH LAGAI KE EK FUNCTION HOTA HAI JS MAI JISHA  BOLTA HAI [MATH.RANDOM] YA 0 se 1 KE BEACH MAI SE RANDON KOI BHE VALUE LE LETA HAI.
+  .) TO HUMNA EK APPROACH LAGYI KE YADI IS SE IS KE BACH MAI NO AYAGA TO BAT COMPUERT BAG CHOOSE KRAGA.
+    .) AUR IS SE IS KA BEACH MAI NO AYGA TO BALL CHOOSE KRAGA.
+   .) AUR IS SE IS KA BEACH MAI NO AYGA TO STUMP CHOOSE KRAGA. 
+
+                                                        [LOGICAL OPERATOR]
+
+ 1.)AND=> &&  all condition must be true for the result to be true.
+ 2.)OR=>||    only one condtion must be true for the result to be true.
+3.)NOT=> !     inverts the boolean value of condition -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>cricket game</title>
+    <style>
+    body{
+    text-align: center;
+     }
+    </style>
+</head>
+<body>
+    <h1>BAT BALL STUMP GAME</h1>
+    <button onclick=" //haimna button pa onclick laga dia onclick mtlb hum //onclick ka ander jo likhyga vo button dabana se chlayga
+    let randomnumber = Math.random()*3;//into three ka mtlb ha computer value jo lega vo ab 0 OR 3 ka beach mai se legyga .THIS WILLL GENERTE RANDOM NUMBER BETWEEN 0 & 3
+   let computerchoice;// haima is varible ka scope global bna dia jis se isa hum khai bhe usse kr saka-->
+
+    if (randomnumber > 0 && randomnumber <=1){
+    computerchoice='bat';    
+    // console.log('computerchoice is bat');
+    }
+    else if(randomnumber > 1 && randomnumber <=2){  
+         computerchoice='ball';
+    // console.log(computer choice is ball');
+    }
+    else {
+     computerchoice = 'stump';
+    // console.log('computer choice is stump');
+    }
+
+
+let resultmsg;
+    if(computerchoice==='ball'){
+   resultmsg ='users win';
+    }
+    else if(computerchoice==='bat'){
+   resultmsg ='the match is tie';
+    }
+
+    else if(computerchoice==='stump'){
+   resultmsg = 'computer has won';
+    }
+
+     const computerchoicemsg=`${computerchoice}`;//yai line haimna short mai likh de upper teeno line comment kri hai unki batki .
+
+    alert (`you have choosen a bat.computerchoice is ${computerchoicemsg} and ${resultmsg}`);//yai haimna screen pa message show krna ks lia likhi hai.
+    ">bat</button>
+                                      <!-- ------------- -->
+
+    <button onclick=" randomnumber = Math.random()*3;//into three ka mtlb ha computer value jo lega vo ab 0 OR 3 ka beach mai se legyga .THIS WILLL GENERTE RANDOM NUMBER BETWEEN 0 & 3
+    //  computerchoice;// haima is varible ka scope global bna dia jis se isa hum khai bhe usse kr saka-->
+ 
+     if (randomnumber > 0 && randomnumber <=1){
+     computerchoice='bat';    
+     // console.log('computerchoice is bat');
+     }
+     else if(randomnumber > 1 && randomnumber <=2){  
+          computerchoice='ball';
+     // console.log(computer choice is ball');
+     }
+     else  {
+      computerchoice = 'stump';
+     // console.log('computer choice is stump');
+     }
+ 
+//  resultmsg;
+  
+     if(computerchoice ==='ball'){
+    resultmsg =`it's is tie`;
+     }
+     else if(computerchoice==='bat'){
+    resultmsg ='computer has won';
+     }
+     else if(computerchoice==='stump'){
+    resultmsg = 'user won.';
+     }
+ 
+      computerchoicemsg =`${computerchoice}`;//yai line haimna short mai likh de upper teeno line comment kri hai unki batki .
+ 
+     alert (`you have choosen a ball.computerchoice  is  ${computerchoicemsg} and ${resultmsg}`);//yai haimna screen pa message show krna ks lia likhi hai.
+">ball</button>
+                                               <!-- ------ -->
+
+    <button onclick="  randomnumber = Math.random()*3;//into three ka mtlb ha computer value jo lega vo ab 0 OR 3 ka beach mai se legyga .THIS WILLL GENERTE RANDOM NUMBER BETWEEN 0 & 3
+    // computerchoice;// haima is varible ka scope global bna dia jis se isa hum khai bhe usse kr saka-->
+
+    if (randomnumber > 0 && randomnumber <=1){
+    computerchoice='bat';    
+    // console.log('computerchoice is bat');
+    }
+    else if(randomnumber > 1 && randomnumber <=2){  
+         computerchoice='ball';
+    // console.log(computer choice is ball');
+    }
+    else {
+     computerchoice = 'stump';
+    // console.log('computer choice is stump');
+    }
+
+// resultmsg;
+ 
+    if(computerchoice ==='ball'){
+   resultmsg=`computer has won`;
+    }
+    else if(computerchoice==='bat'){
+   resultmsg ='user won';
+    }
+    else if(computerchoice==='stump'){
+   resultmsg = `it's a tie`;
+    }
+
+     computerchoicemsg=`${computerchoice}`;//yai line haimna short mai likh de upper teeno line comment kri hai unki batki .
+
+    alert (`you have choosen a stump.computer choice  is  ${ computerchoicemsg } and ${resultmsg}`);//yai haimna screen pa message show krna ks lia likhi hai." >stump</button>
+</body>
+</html>

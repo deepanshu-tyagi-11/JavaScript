@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>calculator</title>
+    <link rel="stylesheet" href="/CSS folder/calculator.css"> 
+</head>
+<body>
+   <div id="calculator">
+    <input type="text" id="Display" readonly>
+    <div class="button-container">
+
+    <button class="button"onclick="currentDisplay = '' ;document.querySelector('#Display').value = currentDisplay;">c</button>
+
+
+    <button class="button" onclick="currentDisplay = currentDisplay + '1' ;document.querySelector('#Display').value = currentDisplay;">1</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '2' ;document.querySelector('#Display').value = currentDisplay;">2</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '+' ;document.querySelector('#Display').value = currentDisplay;">+</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '3' ;document.querySelector('#Display').value = currentDisplay;">3</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '4' ;document.querySelector('#Display').value = currentDisplay;">4</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '-' ;document.querySelector('#Display').value = currentDisplay;">-</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '5' ;document.querySelector('#Display').value = currentDisplay;">5</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '6' ;document.querySelector('#Display').value = currentDisplay;">6</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '*' ;document.querySelector('#Display').value = currentDisplay;">*</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '7' ;document.querySelector('#Display').value = currentDisplay;">7</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '8' ;document.querySelector('#Display').value = currentDisplay;">8</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '/' ;document.querySelector('#Display').value = currentDisplay;">/</button>
+    
+
+    <button class="button"onclick=" currentDisplay=eval(currentDisplay); document.querySelector('#Display').value = currentDisplay;">=</button>
+    <!-- equal to ka case thoda alag hai-->
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '9' ;document.querySelector('#Display').value = currentDisplay;">9</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '0' ;document.querySelector('#Display').value = currentDisplay;">0</button>
+
+    <button class="button"onclick="currentDisplay = currentDisplay + '.' ;document.querySelector('#Display').value = currentDisplay;">.</button>
+
+    </div>
+   </div>
+   <script>
+let currentDisplay='';
+document.querySelector('#Display').value=currentDisplay;//yaha haimna [innertext] ke jagha [.value] likhyga kuki haimna jo class le hai [display]vo input ka lia hai.. 
+   </script>
+</body>
+</html>

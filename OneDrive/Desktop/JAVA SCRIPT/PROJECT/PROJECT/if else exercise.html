@@ -1,0 +1,31 @@
+<!-- 1.)give discount bases on age ,gender for metro ticket.
+ => female get 50 % of.
+=> kind under 5year of age are free.
+=>kinds under 8 year have half ticket.
+=>people over 65 years of age only pay 30% of the ticket.
+=>in case of multiple discount max discount will apply. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>metro ticketing</title>
+</head>
+<body>
+    <script>
+let age=21;
+let gender ='male';// possible vale male and female;
+let finaldiscount;
+
+if(age<=5){
+finaldiscount=100;}
+else if(gender ==='female'|| age<=8){
+finaldiscount=50; }
+// else if(age<8){
+// finaldiscount=50;}
+else if(age<=65) {
+finaldiscount =30;}
+else{
+    finaldiscount=0;}
+console.log(` your final discound is${finaldiscount}`)
+    </script>
+</body>
+</html>
