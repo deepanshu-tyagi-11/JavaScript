@@ -1,0 +1,57 @@
+           <!-- TOPICS :
+1.) Anonymous functions and values.
+2.) arrow functions.
+3.) ste timeout & setinterval.
+4>) event listner.
+5.) for each loop.
+6.) array method. -->
+
+
+<!-- 1.) Anonymous functions and values:
+   .FUNCTION KO BINA KSI NAM KA DELCLAR KRNA IS CALLED ANONYMOUS FUNCTION aur hum isa as values ksha use krta hai ya bhe dkhna hai.. 
+
+   i.) function in javscript are fist class citzen ; they can be assigned to avariable.
+   iska mtbl jha jha hum object ko use kr sakta tha yaha yaha hum function ko bhe use kr sakta hai..
+
+   ii.)anonymous function can bhe properties in object.
+   ksi bhe object mai hum function ko define kr sakta hai as a method..
+
+   iii.) invoked [USING()] after the function and name of variable.
+
+   iv.) can be passed as argument to other function .
+   
+   v.) console.log(myfunction);and typeof myfunction will both indicate it's a function.-->
+
+
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <title>ADVANCED FUNCTION</title>
+   </head>
+   <body>
+    <script>
+        // let sum = function(num1,num2){
+        //    return num1+num2;
+        //  };
+        //  let newsum = sum;
+        //  console.log(sum(4,4));
+        //  console.log(newsum(4,88));
+
+                   //OR
+
+        let sum = function(num1,num2){
+            return num1 + num2;
+        };
+        let sumThreeNumbers = function(num1, num2, num3,sumTwoNumber){//can be passed as argument to other function -->
+         let sum1 = sumTwoNumber(num1,num2);
+          return sumTwoNumber(sum1,num3);
+        }
+          console.log(sumThreeNumber(2,3,5 ,sum));
+         
+        console.log(sumThreeNumbers);
+        console.log(typeof sumThreeNumbers);//function bhe jo ha JS  mai ek traha da datatype hua..
+    
+    </script>
+   </body>
+   </html>

@@ -1,0 +1,43 @@
+<!--
+  1.) FILTER METHOD;
+
+.)syntax=> array.filter((value,index)=>return true/false)
+.) use=> filter element based on condition.
+// yadi hama kuch element mtlb ksi set ya array ma se kuch subset niklna hoo to hum filter ka use kr sakta hai.
+
+2.) MAP METHOD;
+
+.) SYNTAX=> array.map((value)=> return newvalue)
+. USE => transform each element. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>array method</title>
+</head>
+<body>
+    <script>
+        //  let array =[1,2,3,4,5,6,7,8,,9];
+        // let odds = array.filter((num,index) =>{
+        //   if(num % 2===1) {
+        //     return true;
+        //   } else{
+        //     return false;
+        //   }
+        // });
+        // console.log(odds); // this is filter method;
+                  
+                  //OR
+
+    //     let newodds = array.filter((num,index) => num % 2===1
+    // );
+    //     console.log(newodds);   
+
+     let array=[1,2,3,4,56,];
+     let squares =array.map(num => num*num);
+console.log(squares);// this is map method
+
+    </script> 
+</body>
+</html>

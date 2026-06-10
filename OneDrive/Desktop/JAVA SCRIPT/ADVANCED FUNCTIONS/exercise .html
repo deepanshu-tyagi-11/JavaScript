@@ -1,0 +1,82 @@
+<!-- 1.) create a variable multiply and assign a function to this , variable thata multiplies two number . call this methid from the variable.
+
+2.) creat a function runtwice..that takes a function as a parameter and then runs that method twice.
+
+3.) create a button which should grow doble  in a size on clickung after 2 second.
+
+4.)in the above exercise add the behaviour using an event listner instead of onclick.
+
+5.) creata a function that sum an array of numbers. do this using a for each loop.
+
+6.)creat a function thata takes an array of numbers and return their squares using map function. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>exercise</title>
+    <style>
+        .button-subscribe{
+            font-size: 15px;
+           height:20px ;
+           width:80px ; 
+           background-color: rgb(190, 57, 13);
+           border-radius: 4px;
+           border:none;
+           color: rgb(253, 246, 246);
+        }
+        js-.size-double{
+            font-size:30px;
+            height:40px ;
+            width:160px ;   
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <button class = "button-subscribe ">subscribe</button><!--onclick mai haimna ek method likh dia doublethesize jis se oncliclk ka ander jadya code nai likhna pada..aur pura code hama html mai bhe nhi likhna padyga-->
+
+    <!-- <script>
+        let multiply =(num1 ,num2)=>num1* num2;
+        console.log(multiply(2,56));// anonymous function hai 2 argument leta hai aur sibgle line return statment hai. aur phir call kr dia.
+    </script> -->
+
+    <!-- <script>
+    let printgreeting =()=> console.log('namaste');// isma haima big bracket nhi lagya kuki mai isa as a argument pass kr raha hmm.
+    let runtwice = inputfunction=>{
+        inputfunction();
+        inputfunction(); 
+    }
+   runtwice(printgreeting);// maina apna printgreeting method ko runtwice mai pass kr dia aur phir console.log kr dfia..
+    </script> -->
+
+      <!-- <script>
+
+ let buttonElement = document.querySelecto
+ ('.button-subscribe');
+ buttonElement.addEventListener
+('click',event =>
+setTimeout (doubleThesize,2000)
+)
+
+     function doubleThesize(){
+     let buttonElement = document.querySelector('.button-subscribe');
+  //haimna yaha button find kar lia
+
+     buttonElement.classList.add('js-doubleThesize');
+     }//phir ek class add kr dia.
+    </script> -->
+
+<script>
+
+    let arr=[1,2,3,4,5,6,9555556665];
+    // let sum=0;
+    // arr.forEach(num=>sum+=num);
+    // console.log(sum);
+
+    let squares = arr.map(num => num*num);
+    console.log(squares);
+
+</script>
+
+</body>
+</html>

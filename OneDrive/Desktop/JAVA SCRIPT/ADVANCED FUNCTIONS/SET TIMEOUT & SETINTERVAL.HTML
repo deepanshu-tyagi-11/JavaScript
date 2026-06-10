@@ -1,0 +1,45 @@
+<!-- 1.)function for executing code asynchronously after a delay.
+
+2.)settimeout runs once; setinterval runs repeatedly.// ksi bhe cheej ko ek bar run kra ga aur ek time ka lia krayga..
+
+3.)settimeout:
+ SYNTAX: settimeout(function ,time)
+ cancel:cleartimeout(timerid).. 
+ // hum use krta hai javascript ka ander yadi haima kuch kam ksi time pai krna hai to hum settimout ka use kr sakata hai..
+
+ 4.)setinterval:
+ syntax:setinterval(funrction, time)
+ cancel:clearinterval(intervalid) -->
+
+
+    
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>set timeout</title>
+ </head>
+ <body>
+    <script>
+        let alarm = () =>console.log(`subha ho gyi bsdka ka uth ga ${new date()}`);
+
+        let timerid = setTimeout(alarm ,3000);
+
+        //1.)haimna ek function lia aur apna set timeout mai pass kr dia aur time de dia ke kitna millisecond bad execute hona hai..
+        // 2.)yai apna timerid bhe return krta hai sath mai jub function chlta hai.
+
+        // console.log('alaram set ho gya badhu');
+
+        console.log(`alarm set ho gya badhu:${timerid}`);
+        clearTimeout(timerid);//ab alaram execute nhi hoga kuki haimna execute hona se phla he he clear kr dia .
+
+        //  let intervalid  = (alaram,1000);//interval mtlb ya kam har ek second[1000 mtbl 1 millisecond] bad krta rahyna..
+        //  clearInterval(intervalid);// is se jo bhe hamra print ho raha hai  hum esha erase kr sakta hai.
+
+                  //OR
+
+                  let intervalid  = setInterval(alaram,5000);
+                  setTimeout(()=>clearInterval(intervalid),5000);// yai ha jub muja 5 second bad apna alaram ko band krna hoo.5 second tuk program chlta rehyga aur phir band hon jayga..
+     </script>
+ </body>
+ </html>

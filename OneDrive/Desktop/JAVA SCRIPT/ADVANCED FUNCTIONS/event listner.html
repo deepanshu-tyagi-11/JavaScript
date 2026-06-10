@@ -1,0 +1,30 @@
+<!-- 1.) what is event : occurence like clicks , mouse movement , keyboard input(e.g birthday, functions);
+2.) using querselector to attach eventlistner.
+
+3.) multuple listner: you can add more than one.
+4.) removeeventlistner('event', functionvariable); -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>event listner</title>
+    <button id="my-button">click-me</button>
+</head>
+<body>
+    <script>
+   let buttonelement= document.querySelector('#my-button');
+
+   let behaviour =event=>console.log('i am clicked');// behaviour ek function hai
+   buttonelement.addEventListener('click',   bhevaiour); 
+                       
+                   //OR
+
+     let printdate = event=>console.log(new date());// isma print date ek function hai
+     buttonelement.addeventlistner('click' ,printdate);// click ek event listner hai hum aur bhe alag alag eventlistner laga sakta hai google pai dkh kai  bus CLICK ke jagha change krta rehyga..    
+     
+     
+     buttonelement.removeEventListener('click',behaviour);
+
+    </script>
+</body>
+</html>
