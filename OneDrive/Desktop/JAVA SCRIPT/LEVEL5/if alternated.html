@@ -1,0 +1,48 @@
+<!-- [NOTE].
+=>SIMPLIF CONDITIONAL LOGIC.
+=>USE WISELY TO MAINTAIN REDABLITY.-->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>if else alternated</title>
+</head>
+<body>
+    <script> 
+        // TERNARY OPERATOR;
+// =>USE ONE LINE IF OR ELSE;
+
+        // let age=5;
+        // let result;
+        // if(age>18){
+        //     result= 'drive a car';
+        // }
+        // else{
+        //     result= 'not to drive a car';
+        // }
+        // console.log(result);
+        //         // OR
+        //         let result= age>18 ?'DRIVE A CAR':'NOT TO DRIVE A CAR';//haimna ternary operator ke madad se yai chota kr ka likh lia.
+        //         console.log(result); 
+
+    // GUARD OPERATOR;
+
+    // =>USE WHEN A FALLBACK VALUE IS NEEDED;
+
+    // let age;//asha likhna se answer a jayga [undefined or 18];
+// let age=32;
+// let finalage = age||18; // guard operaror ka mtlb yadi kabhi age define na hoo too tum [finalage] ke jagha 18 ..aur age a jaygi undefined .
+// console.log(age);
+// console.log(finalage);
+
+// DEFAULT OPERATOR;
+// =>USE WHEN YOU WANT TO CONSIDER ONLLY NULL AND UNDEFINED AS FALSY.
+
+let age;
+let finalage = age ?? 18;
+console.log(age);
+console.log(finalage);
+    </script>
+    
+</body>
+</html>
