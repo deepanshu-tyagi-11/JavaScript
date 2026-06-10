@@ -1,0 +1,104 @@
+<!-- QUES:
+1.)add a elent in front of loop and ending of loop.
+
+2.)creat a method to return an element at a particular position in the array.
+
+3.)craete an array copy using slice method.
+
+4.)create a while loop that exist after counting 5 prime number.
+
+5.)modify the above loop to finish using break.
+
+6.)create a for loop that print number 1 to 10 in reverse order;
+
+7.)using continue only print positive number from the given array[1,-6,5,7,-98]
+
+8.) using accumaltor pattern concatenate all the string in the given array['kg','coading','javascript','course','is','best'];
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let array=[5,6];
+        // array.push(4);
+        // console.log(array);
+        // array.unshift(8);
+        // console.log(array);
+
+        // function getElement(arr, position){
+        // return arr[position-1]; // index hota hai position minus 1;
+        // }
+        // let arr=[1,2,3,4,5,6,7,8,9];
+        // console.log(getElement(arr,6));// output ayga 6 because position minus one hai.
+
+        // function arrcopy(arr){
+        //     return arr.slice(0,arr.length)
+        // }
+        // let arr=[1,2,3,4,5];
+        // console.log(arrcopy(arr));//output 2 and 3.
+        // let arr2 =arrcopy(arr);
+        // arr2[0]=null;
+        // console.log(arr);
+        // console.log(arr2); // haa haima pta chal gya ke copy he bni hui hai..
+
+        // let i =0;
+        // let arr=[1,2,3,5,6,6,7];
+        // while(){
+
+        // }
+        // i++;
+
+        // QUES 4.
+
+//         function isprime(num){
+//             let i=1
+//            for(let i=2; i<num;i++){
+//            if(num%i==0){
+//             return false;
+//            }
+//         }
+//         return true;
+//     }
+//     let num=2;
+//     let i=0;
+//     while(true){// or while(i<=5)
+//     if(isprime(num)){
+//     console.log(num);
+//     i++;
+//     if(i>=5){
+//         break;
+//     }
+//     }
+//     num++;
+//   }
+
+// for(let i=10;i>0;i--){
+//     console.log(i);
+// }
+
+ //for(let i=0;i<10;i++){
+     console.log(10-i);
+ }
+  
+let nums =[1,-6,5,7,-98]
+for(let i=0; i<nums.length;i++){
+if(num[i]<=0)
+continue;
+console.log(num[i]);
+}
+
+let arr=['kg','coading','javascript','course','is','best'];
+ let result =''; 
+ for(let i=0; i<arr.length;i++){
+ result+=arr[i]+' ';
+ } 
+ console.log(result);
+           OR
+
+  console.log(arr.join(" , "));// asha bhe hum string ko jod sakta hai.         
+ </script>
+</body>
+</html>

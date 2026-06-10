@@ -1,0 +1,54 @@
+<!-- ARRAY..
+1.) a array is just a list of values
+2.)array is used to storing a multiple value in a singlr variable.
+3.) exmaple=> 
+let array =[ 1, 'deepu',null,true,like:'{1 million}']
+NOTE=> 1.) js ka ander asha mhi hota baki language ke traha ke array ka ander same type ke value he honi chyia.. js mai to hum ksi bhe type ke value dal sakta hai.
+2.) Array is also a special type of object 
+-->
+
+<!-- METHOD:
+1.)array.isarray()
+2.)length
+3.)push/pop=>  add and remove to end;
+4.)shift/unshift=> add and remove in front.
+5.)splice:=>add or remove element in any particular position.
+6.)tostring=>convert to string.
+7.)sort=> to arrange in increasing order.
+8.)valueof=>copy array itself.
+.i)array also use refrence like object.=>mera object bnayga memory mai aur refrence bnayga mera variable mai-->
+<!-- .ii) de-structing also work for arrays. =>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>array</title>
+</head>
+<body>
+    <script>
+        // // let number=[1,2,3,4,5,6,8,9,9]
+        // // console.log(number);
+        // // console.log(number[4]);
+        // let array =[ 1, 'deepu',null,true,]
+        // // console.log(array[1]);
+        // console.log(array);
+        // console.log('popped'+array.pop());
+        // console.log(arr);
+       
+        // console.log('popped'+array.pop());
+        // console.log(arr);
+        
+        let second=[1,12,,3,4,5];
+        console.log(second);
+        second.splice(1,2);
+        console.log(second);
+
+        let second2 = second;//second 2 is a a refrence of second
+        second2[0]=99;
+        console.log(second);
+
+        let [a,b,c,d]=second;
+        console.log(a+"" +b+ ""+c+ ""+d);// this is destructing of array. haima second variable ka ander value rakhi hai ya hamri turn vise A, B,C, ka ander a jaygi.
+    </script>
+</body>
+</html>
